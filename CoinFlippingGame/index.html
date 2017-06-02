@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" type="text/css" href="css/Login.css">
+<title>New HMTL document by NewJect</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+        <link rel="stylesheet" href="CSS/countdown.css" />
+        <link rel="stylesheet" href="Scripts/Apps/jquery.countdown.css" />
+</head>
+
+<body>
+
+<div id="countdown"></div>
+<p id="note"></p>
+
+<div class="btnWrapper" style="text-align: center">
+<!-- Button to open the modal login form -->
+    <button class="mBtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+    <!-- Button to open the modal login form -->
+    <button class="mBtn" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registrer</button>
+</div>
+
+<!-- The Login Modal -->
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="get">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="/Images/img_avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label><b>Brukernavn</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Passord</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <input type="checkbox" checked="checked"> Husk meg
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Glemt <a href="#">passord?</a></span>
+    </div>
+  </form>
+</div>
+<!-- End Login Modal -->
+
+
+<!--- Signup Login Modal -->
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate" action="/action1_page.php">
+    <div class="container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Passord</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label><b>Repeter Passord</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <input type="checkbox" checked="checked"> Husk meg
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Registrer nå!</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- End of Signup Modal -->
+
+
+
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="Scripts/Apps/jquery.countdown.js"></script>
+<script src="Scripts/script.js"></script>
+
+
+
+
+</body>
+</html>
