@@ -1,16 +1,19 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+body {
+  background-color: #007272;
+}
 .radial-progress {
   margin: 50px;
-  width: 310px;
-  height: 310px;
+  width: 350px;
+  height: 350px;
   background-color: #d6dadc;
   border-radius: 50%;
 }
 .radial-progress .circle .mask,
 .radial-progress .circle .fill,
 .radial-progress .circle .shadow {
-  width: 310px;
-  height: 310px;
+  width: 350px;
+  height: 350px;
   position: absolute;
   border-radius: 50%;
 }
@@ -26,19 +29,19 @@
   border-radius: 50%;
 }
 .radial-progress .circle .mask {
-  clip: rect(0px, 310px, 310px, 155px);
+  clip: rect(0px, 350px, 350px, 175px);
 }
 .radial-progress .circle .mask .fill {
-  clip: rect(0px, 155px, 310px, 0px);
+  clip: rect(0px, 175px, 350px, 0px);
   background-color: #f47b20;
 }
 .radial-progress .inset {
   width: 300px;
   height: 300px;
   position: absolute;
-  margin-left: 5px;
-  margin-top: 5px;
-  background-color: #ffffff;
+  margin-left: 25px;
+  margin-top: 25px;
+  background-color: #007272;
   border-radius: 50%;
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
 }
@@ -1487,16 +1490,15 @@
   position: absolute;
   width: 300px;
   height: 300px;
+  background-color: #007272;
 }
 #coin .front {
   transform: translateZ(1px);
   border-radius: 50%;
-  background-color: #3498db;
 }
 #coin .back {
   transform: translateZ(-1px) rotateY(180deg);
   border-radius: 50%;
-  background-color: #2ecc71;
 }
 /*coin flip css*/
 #coin.animation900 {
