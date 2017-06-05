@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" type="text/css" href="CSS/progressBar.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.6.1/less.min.js"></script>
+
+<title>Changiz' Fortress of Solitude</title>
+</head>
+<body>
+    <div><p id="points">0</p></div>
+
+    <div class="radial-progress" data-progress="0">
+        <div class="circle">
+            <div class="mask full">
+                <div class="fill"></div>
+            </div>
+            <div class="mask half">
+                <div class="fill"></div>
+                <div class="fill fix"></div>
+            </div>
+            <div class="shadow"></div>
+        </div>
+        <div class="inset">
+            <div class="percentage">
+            </div>
+            <div id="coin-flip-cont">
+                    <div id="coin">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+<script>
+$(document).ready(function(){
+    
+    $('head style[type="text/css"]').attr('type', 'text/less');
+        less.refreshStyles();
+        window.update = function() {
+            if($('.radial-progress').attr('data-progress') >= 100){
+                $('.radial-progress').attr('data-progress', 0) 
+            }
+            $('.radial-progress').attr('data-progress', 
+            (function(i, val) { 
+                return val*1+10 
+            })
+        )}
+        setTimeout(50);
+        $('.radial-progress').click(window.update);
+
+})
+        
+</script>
+
+<script src="Scripts/coinFlip.js"></script>
+
+</body>
+</html>
