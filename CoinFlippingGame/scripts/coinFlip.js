@@ -12,11 +12,21 @@ jQuery(document).ready(function ($) {
         }, 50);
         
         updatePoints();
+        updateDays();
     });
     
+    
+    var point = 0;
     function updatePoints() {
-        $('#points').html(function (i, val) {
-            return val * 1 + 10
+        $('#points').html(function (i, point) {
+            return point * 1 + 10
+        });
+    };
+    
+    function updateDays() {
+        var days = 0;
+        $('#days').html(function (i, days) {
+            return days * 1 + 1
         });
     };
 });
