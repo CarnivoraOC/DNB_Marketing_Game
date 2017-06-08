@@ -9,7 +9,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-button {
+.nButton {
     background-color: #007272;
     color: white;
     padding: 14px 20px;
@@ -21,6 +21,11 @@ button {
 
 button:hover {
     opacity: 0.8;
+}
+
+.slogan {
+    color: #f47b20; font-size: 48px; font-family: 'Signika', sans-serif; padding-bottom: 10px;
+    text-align: center;
 }
 
 .mBtn {
@@ -36,13 +41,62 @@ button:hover {
     cursor: pointer;
 }
 
-
-
 /* Extra styles for the cancel button */
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
+    border: none;
+    cursor: pointer;
+    margin: 8px 0;
+    color: white;
+}
+
+.imgBtn {
+    width: 150px;
+    margin-top: 40px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.teemName {
+    width: 250px;
+    height: 200px;
+    text-align: center;
+}
+
+.teemNameContainer {
+    text-align: center;
+}
+
+.pulse:hover {
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
 }
 
 /* Center the image and position the close button */
@@ -133,6 +187,7 @@ span.psw {
 }
 
 /* END LOGIN FORM */
+
 
 
 
