@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" type="text/css" href="css/Login.css">
+<title>DNB TEEM</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+        <link rel="stylesheet" href="CSS/countdown.css" />
+        <link rel="stylesheet" href="Scripts/apps/jquery.countdown.css" />
+</head>
+
+<body>
+
+<div class="teemNameContainer"><img class="teemName" src="Images/teemName.png"></div>
+<h1 class="slogan">Sånn har du aldri brukt banken din før.</h1>
+<div id="countdown"></div>
+
+<div id="date">
+    <h1>23</h1>
+    <h3>JULI</h3>
+</div>
+
+
+
+<div class="btnWrapper" style="text-align: center">
+<!-- Button to open the modal login form -->
+    <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img class="imgBtn" src="Images/network.svg"/></a>
+</div>
+
+<!-- The Login Modal -->
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="get">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <h1>Hva teller vi ned til?</h1>
+      <p>Den 23. juli lanserer vi noe du ikke har sett før. Registrer deg her og få med deg minst tre venner for å få en sniktitt før lansering!</p>
+        <p>Allerede bruker? Logg inn <a href="#">her</a></p>
+      <!--<img src="/Images/img_avatar.png" alt="Avatar" class="avatar"> -->
+    </div>
+
+    <div class="container">
+      <label><b>Navn</b></label>
+      <input type="text" placeholder="Tast inn navn" name="uname" required>
+      
+      <label><b>Epost</b></label>
+      <input type="text" placeholder="Tast inn epost" name="email" required>
+
+      <label><b>Passord</b></label>
+      <input type="password" placeholder="Tast inn passord" name="psw" required>
+       
+       <label><b>Repeter Passord</b></label>
+       <input type="password" placeholder="Tast inn passord" name="psw" required>
+       
+       <label><b>Rekruter Venner - Opptil 5 stykker</b></label>
+       <input type="text" placeholder="Tast inn epost" name="email">
+       <input type="text" placeholder="Tast inn epost" name="email">
+       <input type="text" placeholder="Tast inn epost" name="email">
+       
+       <label><b>Gruppenavn</b></label>
+       <input type="text" placeholder="Tast inn gruppe navn" required>
+        
+      <button type="submit" class="nButton">REGISTRER</button>
+      <input type="checkbox" checked="checked"> Husk meg
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Glemt <a href="#">passord?</a></span>
+    </div>
+  </form>
+</div>
+<!-- End Login Modal -->
+
+
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="Scripts/Apps/jquery.countdown.js"></script>
+<script src="Scripts/script.js"></script>
+
+
+
+
+</body>
+</html>

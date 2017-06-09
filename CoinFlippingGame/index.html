@@ -6,82 +6,63 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="stylesheet" type="text/css" href="css/Login.css">
-<title>DNB TEEM</title>
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
-        <link rel="stylesheet" href="CSS/countdown.css" />
-        <link rel="stylesheet" href="Scripts/apps/jquery.countdown.css" />
+<link rel="stylesheet" type="text/css" href="CSS/progressBar.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="Scripts/plugins/less.min.js"></script>
+<title>DNB Flipp</title>
 </head>
-
 <body>
+    <div><h3 id="points">0</h3></div>
 
-<div class="teemNameContainer"><img class="teemName" src="Images/teemName.png"></div>
-<h1 class="slogan">Sånn har du aldri brukt banken din før.</h1>
-<div id="countdown"></div>
-
-<div id="date">
-    <h1>23</h1>
-    <h3>JULI</h3>
-</div>
-
-
-
-<div class="btnWrapper" style="text-align: center">
-<!-- Button to open the modal login form -->
-    <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img class="imgBtn" src="Images/network.svg"/></a>
-</div>
-
-<!-- The Login Modal -->
-<div id="id01" class="modal">
-  <form class="modal-content animate" action="/action_page.php" method="get">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <h1>Hva teller vi ned til?</h1>
-      <p>Den 23. juli lanserer vi noe du ikke har sett før. Registrer deg her og få med deg minst tre venner for å få en sniktitt før lansering!</p>
-        <p>Allerede bruker? Logg inn <a href="#">her</a></p>
-      <!--<img src="/Images/img_avatar.png" alt="Avatar" class="avatar"> -->
+    <div class="radial-progress" data-progress="0">
+        <div class="circle">
+            <div class="mask full">
+                <div class="fill"></div>
+            </div>
+            <div class="mask half">
+                <div class="fill"></div>
+                <div class="fill fix"></div>
+            </div>
+            <div class="shadow"></div>
+        </div>
+        <div class="inset">
+            <div class="ppercentage">
+            </div>
+            <div id="coin-flip-cont">
+                    <div id="coin">
+                        <img src="Images/coin_front.png" class="front"/>
+                        <img src="Images/coin_back.png" class="back"/>
+                    </div>
+            </div>
+        </div>
     </div>
+    
+    <div><h1 id="days">0</h1><h4>DAGER PÅ RAD!</h4></div>
+    
+<script src="Scripts/jquery/jquery-3.2.0.min.js"></script>
+    
+<script>
+$(document).ready(function(){
+    
+    $('head style[type="text/css"]').attr('type', 'text/less');
+        less.refreshStyles();
+        window.update = function() {
+            if($('.radial-progress').attr('data-progress') >= 100){
+                $('.radial-progress').attr('data-progress', 0) 
+            }
+            $('.radial-progress').attr('data-progress', 
+            (function(i, val) { 
+                return val*1+10 
+            })
+        )}
+        setTimeout(50);
+        $('.radial-progress').click(window.update);
 
-    <div class="container">
-      <label><b>Navn</b></label>
-      <input type="text" placeholder="Tast inn navn" name="uname" required>
-      
-      <label><b>Epost</b></label>
-      <input type="text" placeholder="Tast inn epost" name="email" required>
-
-      <label><b>Passord</b></label>
-      <input type="password" placeholder="Tast inn passord" name="psw" required>
-       
-       <label><b>Repeter Passord</b></label>
-       <input type="password" placeholder="Tast inn passord" name="psw" required>
-       
-       <label><b>Rekruter Venner - Opptil 5 stykker</b></label>
-       <input type="text" placeholder="Tast inn epost" name="email">
-       <input type="text" placeholder="Tast inn epost" name="email">
-       <input type="text" placeholder="Tast inn epost" name="email">
-       
-       <label><b>Gruppenavn</b></label>
-       <input type="text" placeholder="Tast inn gruppe navn" required>
+})
         
-      <button type="submit" class="nButton">REGISTRER</button>
-      <input type="checkbox" checked="checked"> Husk meg
-    </div>
+</script>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Glemt <a href="#">passord?</a></span>
-    </div>
-  </form>
-</div>
-<!-- End Login Modal -->
-
-
-<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script src="Scripts/Apps/jquery.countdown.js"></script>
-<script src="Scripts/script.js"></script>
-
-
-
+<script src="Scripts/coinFlip.js"></script>
 
 </body>
 </html>
