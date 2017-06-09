@@ -24,8 +24,8 @@ button:hover {
 }
 
 .slogan {
-    color: #f47b20; font-size: 48px; font-family: 'Signika', sans-serif; padding-bottom: 10px;
-    text-align: center;
+    color: #f47b20; font-size: 28px; font-family: 'Signika', sans-serif; padding-bottom: 10px;
+    text-align: center; font-weight: 100;
 }
 
 .mBtn {
@@ -53,15 +53,25 @@ button:hover {
 }
 
 .imgBtn {
-    width: 150px;
+    width: 100px;
+    margin-top: 0px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    opacity: 0.7;
+    transition: 0.5s all;
+}
+
+.imgBtn:hover {
+    width: 120px;
     margin-top: 40px;
     cursor: pointer;
     animation: pulse 2s infinite;
+    opacity: 1;
 }
 
 .teemName {
-    width: 250px;
-    height: 200px;
+    width: 220px;
+    height: 150px;
     text-align: center;
 }
 
